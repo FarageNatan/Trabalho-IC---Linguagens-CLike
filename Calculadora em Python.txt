@@ -1,0 +1,51 @@
+def main():
+    # Loop principal do programa
+    while True:
+        # Exibe o menu de opções
+        print("1-Soma")
+        print("2-Subtração")
+        print("3-Multiplicação")
+        print("4-Divisão")
+        print("0-Sair do programa")
+        opcao = int(input("Digite a opção desejada: "))
+
+        # Verifica se a opção é para sair do programa
+        if opcao == 0:
+            break
+
+        # Solicita os valores para a operação
+        N1 = float(input("Digite o primeiro valor: "))
+        N2 = float(input("Digite o segundo valor: "))
+        resultado = 0  # Inicializa a variável resultado
+
+        # Processa a opção escolhida pelo usuário
+        if opcao == 1:
+            # Soma
+            resultado = N1 + N2
+            print(f"{N1} + {N2} = {resultado}")
+        elif opcao == 2:
+            # Subtração
+            resultado = N1 - N2
+            print(f"{N1} - {N2} = {resultado}")
+        elif opcao == 3:
+            # Multiplicação
+            resultado = N1 * N2
+            print(f"{N1} * {N2} = {resultado}")
+        elif opcao == 4:
+            # Divisão
+            if N2 != 0:
+                resultado = N1 / N2
+                print(f"{N1} / {N2} = {resultado}")
+            else:
+                # Tratamento de erro para divisão por zero
+                print("Erro: Divisão por zero não é permitida.")
+        else:
+            # Mensagem para opção inválida
+            print("Opção inválida. Tente novamente.")
+
+    # Mensagem final após o loop principal
+    print("Programa encerrado.")
+
+# Verifica se o script está sendo executado diretamente
+if __name__ == "__main__":
+    main()
